@@ -144,3 +144,60 @@
     justify-content: center;
   }
   
+  /* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav img {
+    width: 30%;
+  }
+
+  nav .social img {
+    height: 25px;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  main .img-main {
+    width: 100vw;
+    height: 40vh;
+  }
+
+  main .form-container {
+    width: 100vw;
+    padding: 20px;
+  }
+
+  main .form-container .form {
+    width: 100%;
+    gap: 15px;
+  }
+
+  main .form-container .form .nome-cognome,
+  main .form-container .form .email-numero {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  main .form-container .form input[type="text"],
+  main .form-container .form input[type="number"],
+  main .form-container .form input[type="email"] {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  main .form-container .form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main .form-container .form .btn-invia button {
+    width: 100%;
+  }
+}
+
