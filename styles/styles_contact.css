@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  nav {
+    max-width: 100vw;
+    height: 12vh;
+    display: flex;
+    padding: 20px 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1d334a;
+  }
+  
+  nav p {
+    color: #1d334a;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  nav img {
+    width: 40%;
+    height: auto;
+    background-color: #1d334a;
+  }
+  
+  nav .social{
+    background-color: #1d334a;
+  }
+
+  nav .social img {
+    height: 30px;
+    width: auto;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    height: calc(100vh - 12vh);
+  }
+  
+  main .img-main {
+    width: 40vw;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  main .img-main img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  main .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    gap: 10px;
+    padding: 100px;
+  }
+  
+  main .form-container .title {
+    text-align: center;
+  }
+  
+  main .form-container .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  main .form-container .form .nome-cognome,
+  main .form-container .form .email-numero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  main .form-container .form input[type="text"],
+  main .form-container .form input[type="number"],
+  main .form-container .form input[type="email"] {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  main .form-container .form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    width: 700px;
+    height: 150px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  main .form-container .form .btn-invia {
+    display: flex;
+    justify-content: center;
+  }
+  
+  main .form-container .form .btn-invia button {
+    width: 700px;
+    background-color: #1d334a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  main .form-container .form .btn-invia button:hover {
+    background-color: #1b2f42;
+  }
+
+  .conattti-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .conattti-container .contatto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

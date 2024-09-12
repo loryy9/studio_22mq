@@ -86,24 +86,36 @@ body {
 
 .subtitle-container {
   margin-bottom: 50px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   width: 100%;
+  h3{
+    font-weight: normal;
+  }
 }
 
 .subtitle-container .subtitle {
   font-size: 25px;
+  z-index: 5;
+  a{
+    color: white;
+
+  }
+}
+.book{
+  margin-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .contact {
   margin-top: 15px;
-  padding: 15px 25px;
+  padding: 25px 35px;
   border-radius: 99px;
   cursor: pointer;
 }
 
 .more-info {
-  margin-top: 50px;
+  margin-top: 150px;
   animation: bounce 2s infinite;
   display: flex;
   flex-direction: column;
@@ -139,22 +151,36 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px;
+  padding: 150px 50px;
   gap: 40px;
 }
 
 .card {
-  background-color: #fff;
   width: 15vw;
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid #ecbc4b;
-  text-align: center;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.card .img-card{
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+
+.card .img-card svg{
+  height: 100%;
+  width: auto; 
+}
+
 
 .card h3 {
   font-size: 3vh;
   margin-bottom: 10px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,12 +188,11 @@ body {
 }
 
 .card p {
-  font-size: 2vh;
-  letter-spacing: 1px;
+  font-size: 1.7vh;
 }
 
 .big-card-container {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -178,7 +203,7 @@ body {
   background-color: #ecbc4b;
   width: 80%;
   height: 60vh;
-  border-radius: 50px;
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -211,32 +236,40 @@ body {
 
 .big-card .right-text p {
   font-size: 2.3vh;
-  width: 20vw;
+  width: 23.5vw;
   margin-bottom: 30px;
 }
 
 .big-card .right-text h3 {
   font-size: 1.7vh;
   width: 25vh;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .big-card .right-text button {
   background-color: #1d334a;
   color: #ecbc4b;
-  width: 10vw;
-  padding: 10px;
+  border: 1px solid #1d334a;
+  width: 12vw;
+  padding: 20px 10px;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: all .3s ease;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
+
+.big-card .right-text button:hover{
+  color: #1d334a;
+  background-color: #ecbc4b;
+}
+
 .service-card-section {
   height: min-content;
   width: 100vw;
   background-color: #1d334a;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra verticalmente / justify-content: center; / Centra orizzontalmente */
+  align-items: center; 
   padding-top: 80px;
 }
 
@@ -244,8 +277,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch; /* Assicura che le card abbiano la stessa altezza / gap: 40px; / Spazio tra le card */
-  padding: 50px;
+  align-items: stretch; 
+  padding: 50px 50px 20px 50px;
   width: 100%;
   max-width: 1200px;
   gap: 50px;
@@ -255,7 +288,7 @@ body {
   background-color: #ffffff;
   width: 30vw;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -263,13 +296,17 @@ body {
   font-size: 3vh;
   margin-bottom: 10px;
   height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card p {
   font-size: 2vh;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
+  /* letter-spacing: 1px; */
+  /* margin-bottom: 30px; */
   height: 10vh;
+  text-align: left;
 }
 
 .service-card ul {
@@ -282,14 +319,30 @@ body {
   align-items: center;
 }
 
-.service-card ul li span img {
+.service-card ul li span svg{
   height: 30px;
   width: auto;
   margin-right: 8px;
 }
 
+.price{
+  margin-top: 15px;
+}
+
+.cross{
+  /* fill: red; */
+  stroke: red;
+}
+
+.check{
+  /* fill: green; */
+  stroke: green;
+}
+
 .service-card-section .nb {
   color: white;
+  margin-bottom: 30px;
+  font-weight: normal;
 }
 
 .contact-section {
@@ -301,18 +354,27 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px 0px;
 }
 
 .contact-section button {
   width: 10%;
   border-radius: 20px;
   font-size: 20px;
-  padding: 10px;
-  background-color: #fff;
+  padding: 15px 10px;
+  background-color: #1d334a;
+  border: 1px solid white;
+  color: white;
   text-align: center;
-  margin-top: 10px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+  /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); */
   cursor: pointer;
+  transition: all .3s ease;
+}
+
+.contact-section button:hover{
+  background-color: white;
+  color: #1d334a;
 }
 
 .carousel-title {
@@ -389,15 +451,22 @@ body {
 footer {
   border-top: 1px solid white;
   background-color: #333;
-  height: 20vh;
+  height: auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   justify-content: center;
-  color: white;
+  color: white;  
+  padding: 20px 500px;
+}
+
+footer img{
+  height: 15vh;
+  width: auto;
 }
 
 footer p {
-  width: 50%;
+  background-color: #333;
 }
 
 @keyframes fadeIn {
@@ -535,17 +604,17 @@ footer p {
   .service-card {
     width: 80vw;
     padding: 25px 10px;
-    height: min-content; /* Aumenta la larghezza delle card per adattarsi allo schermo mobile */
+    height: min-content; 
   }
 
   .service-card h3 {
-    font-size: 2vh; /* Aumenta leggermente il font per la leggibilità su mobile */
-    height: auto; /* Permette al titolo di adattarsi meglio */
+    font-size: 2vh;
+    height: auto;
   }
 
   .service-card p {
-    font-size: 2vh; /* Aumenta leggermente il font per la leggibilità su mobile */
-    height: auto; /* Permette al paragrafo di adattarsi meglio */
+    font-size: 2vh;
+    height: auto; 
   }
 
   .service-card ul {
@@ -559,7 +628,7 @@ footer p {
   }
 
   .service-card ul li span img {
-    height: 20px; /* Riduce leggermente la dimensione dell'icona */
+    height: 20px; 
   }
 
   .price{

@@ -5,7 +5,6 @@ let currentIndex = 0;
 
 function updateSlider() {
     setTimeout(() => {
-      // update the slider content
       slider.innerHTML = '';
       const startIndex = currentIndex;
       const sliceArray = [];
@@ -21,7 +20,7 @@ function updateSlider() {
         card.appendChild(img);
         slider.appendChild(card);
       });
-    }, 300); // add a brief delay of 300ms
+    }, 300); 
   }
 
 navArrows.forEach((arrow) => {
