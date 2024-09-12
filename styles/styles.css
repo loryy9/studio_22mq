@@ -491,6 +491,9 @@ footer p {
 
 /* Per schermi piccoli e smartphone (max-width: 768px) */
 @media (max-width: 768px) {
+  .home-section{
+    max-height: 100vh;
+  }
   .title-img {
     flex-direction: column;
     width: 100%;
@@ -522,9 +525,12 @@ footer p {
         font-size: 1.2rem;
       }
     }
-    .book {
+    /* .book {
       width: 70%;
       font-size: 1.2rem;
+    } */
+    .more-info{
+      margin-top: 10px;
     }
   }
 
@@ -532,13 +538,14 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 0px;
+    gap: 10px;
+    padding-bottom: 50px;
+    padding-top:50px ;
   }
 
   .card {
     width: 80%;
-
+    padding: 10px;
     h3 {
       font-size: 1rem;
       margin-top: 5px;
@@ -594,9 +601,9 @@ footer p {
   }
 
   .service-card-container {
-    flex-direction: column; /* Cambia il layout da riga a colonna */
-    gap: 20px; /* Riduci lo spazio tra le card */
-    padding: 20px; /* Riduci il padding su mobile */
+    flex-direction: column; 
+    gap: 20px;
+    padding: 20px; 
     align-items: center;
     height: min-content;
   }
@@ -615,6 +622,9 @@ footer p {
   .service-card p {
     font-size: 2vh;
     height: auto; 
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
 
   .service-card ul {
@@ -623,16 +633,16 @@ footer p {
     align-items: center;
     justify-content: center;
     li{
-      width: 80%;
+      width: 90%;
     }
   }
 
-  .service-card ul li span img {
+  .service-card ul li span svg {
     height: 20px; 
   }
 
   .price{
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -645,10 +655,12 @@ footer p {
 
   .contact-section{
     h1{
-      font-size: 1.5rem;
+      width: 70%;
+      font-size: 1.3rem;
     }
     button{
       width: 50%;
+      font-size: 1rem;
     }
   }
 
@@ -685,7 +697,18 @@ footer p {
     left: 5px;
   }
 
+  footer{
+    padding: 30px;
+  }
+
   footer p {
     width: 90%;
+  }
+
+  footer img{
+
+    height: auto;
+    width: 100%;
+    
   }
 }
