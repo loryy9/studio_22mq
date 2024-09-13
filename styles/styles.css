@@ -74,8 +74,16 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -30%);
+  /* transform: translate(-50%, -30%); */
   width: 100%;
+  opacity: 0;
+  transform: translate(-50%, 70%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+body.loaded .home-text {
+  opacity: 1;
+  transform: translate(-50%, -30%); /* Riporta il div alla sua posizione finale */
 }
 
 .home-text .big-title {
@@ -88,7 +96,7 @@ body {
   margin-bottom: 50px;
   letter-spacing: 1px;
   width: 100%;
-  h3{
+  h3 {
     font-weight: normal;
   }
 }
@@ -96,12 +104,11 @@ body {
 .subtitle-container .subtitle {
   font-size: 25px;
   z-index: 5;
-  a{
+  a {
     color: white;
-
   }
 }
-.book{
+.book {
   margin-bottom: 10px;
   text-decoration: underline;
   cursor: pointer;
@@ -159,23 +166,22 @@ body {
   width: 15vw;
   padding: 30px;
   border-radius: 20px;
-  text-align:center;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card .img-card{
+.card .img-card {
   height: 50px;
   width: 50px;
   overflow: hidden;
 }
 
-.card .img-card svg{
+.card .img-card svg {
   height: 100%;
-  width: auto; 
+  width: auto;
 }
-
 
 .card h3 {
   font-size: 3vh;
@@ -254,11 +260,11 @@ body {
   padding: 20px 10px;
   border-radius: 20px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 
-.big-card .right-text button:hover{
+.big-card .right-text button:hover {
   color: #1d334a;
   background-color: #ecbc4b;
 }
@@ -269,7 +275,7 @@ body {
   background-color: #1d334a;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   padding-top: 80px;
 }
 
@@ -277,7 +283,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch; 
+  align-items: stretch;
   padding: 50px 50px 20px 50px;
   width: 100%;
   max-width: 1200px;
@@ -319,22 +325,22 @@ body {
   align-items: center;
 }
 
-.service-card ul li span svg{
+.service-card ul li span svg {
   height: 30px;
   width: auto;
   margin-right: 8px;
 }
 
-.price{
+.price {
   margin-top: 15px;
 }
 
-.cross{
+.cross {
   /* fill: red; */
   stroke: red;
 }
 
-.check{
+.check {
   /* fill: green; */
   stroke: green;
 }
@@ -369,10 +375,10 @@ body {
   margin-top: 20px;
   /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); */
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.contact-section button:hover{
+.contact-section button:hover {
   background-color: white;
   color: #1d334a;
 }
@@ -456,12 +462,13 @@ footer {
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  color: white;  
+  color: white;
   padding: 20px 500px;
 }
 
-footer img{
+footer img {
   height: 15vh;
+  background-color: #333;
   width: auto;
 }
 
@@ -491,7 +498,7 @@ footer p {
 
 /* Per schermi piccoli e smartphone (max-width: 768px) */
 @media (max-width: 768px) {
-  .home-section{
+  .home-section {
     max-height: 100vh;
   }
   .title-img {
@@ -529,7 +536,7 @@ footer p {
       width: 70%;
       font-size: 1.2rem;
     } */
-    .more-info{
+    .more-info {
       margin-top: 10px;
     }
   }
@@ -540,7 +547,7 @@ footer p {
     align-items: center;
     gap: 10px;
     padding-bottom: 50px;
-    padding-top:50px ;
+    padding-top: 50px;
   }
 
   .card {
@@ -592,6 +599,7 @@ footer p {
     }
     button {
       width: 50%;
+      margin-bottom: 40px;
     }
   }
 
@@ -601,30 +609,31 @@ footer p {
   }
 
   .service-card-container {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
-    padding: 20px; 
+    padding: 20px;
     align-items: center;
     height: min-content;
   }
 
   .service-card {
     width: 80vw;
-    padding: 25px 10px;
-    height: min-content; 
+    padding: 50px 10px;
+    height: min-content;
   }
 
   .service-card h3 {
-    font-size: 2vh;
+    font-size: 2.5vh;
     height: auto;
   }
 
   .service-card p {
     font-size: 2vh;
-    height: auto; 
-    width: 70%;
+    height: auto;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .service-card ul {
@@ -632,40 +641,44 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li{
+    li {
       width: 90%;
     }
   }
 
   .service-card ul li span svg {
-    height: 20px; 
+    height: 20px;
   }
 
-  .price{
+  .price {
     margin-top: 30px;
     margin-bottom: 0;
   }
 
-  .nb{
-    font-size: .8rem;
+  .price h3{
+    font-size: 4vh;
+  }
+
+  .nb {
+    font-size: 0.8rem;
     width: 70%;
     text-align: center;
     margin-bottom: 50px;
   }
 
-  .contact-section{
-    h1{
+  .contact-section {
+    h1 {
       width: 70%;
       font-size: 1.3rem;
     }
-    button{
+    button {
       width: 50%;
       font-size: 1rem;
     }
   }
 
-  .carousel-title{
-    font-size: .7rem;
+  .carousel-title {
+    font-size: 0.7rem;
     padding-bottom: 0;
   }
 
@@ -674,30 +687,30 @@ footer p {
     padding-bottom: 20px;
   }
 
-  .slider{
+  .slider {
     height: 20vh;
   }
 
   .slider .images {
     height: 10vh;
     width: 100%;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
-  } 
-  .nav-arrow img{
+  }
+  .nav-arrow img {
     height: 10px;
   }
 
-  .next{
+  .next {
     right: 5px;
   }
-  .prev{
+  .prev {
     left: 5px;
   }
 
-  footer{
+  footer {
     padding: 30px;
   }
 
@@ -705,10 +718,65 @@ footer p {
     width: 90%;
   }
 
-  footer img{
-
+  footer img {
     height: auto;
     width: 100%;
-    
   }
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Loader styles */
+.loader {
+  width: 80px;
+  aspect-ratio: 1;
+  border: 10px solid #000;
+  box-sizing: border-box;
+  background: radial-gradient(farthest-side, #fff 98%, #0000) top,
+    radial-gradient(farthest-side, #fff 98%, #0000) top,
+    radial-gradient(farthest-side, #fff 98%, #0000) left,
+    radial-gradient(farthest-side, #fff 98%, #0000) right,
+    radial-gradient(farthest-side, #fff 98%, #0000) bottom, #000;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  filter: blur(4px) contrast(10);
+  animation: l19 2s infinite;
+}
+
+@keyframes l19 {
+  0% {
+    background-position: top, top, left, right, bottom;
+  }
+  25% {
+    background-position: right, top, left, right, bottom;
+  }
+  50% {
+    background-position: bottom, top, left, right, bottom;
+  }
+  75% {
+    background-position: left, top, left, right, bottom;
+  }
+  100% {
+    background-position: top, top, left, right, bottom;
+  }
+}
+
+/* Hide the loader after 1 second */
+body.loaded .loader-container {
+  opacity: 0;
+  visibility: hidden;
 }
