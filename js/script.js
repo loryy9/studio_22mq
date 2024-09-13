@@ -1,6 +1,6 @@
 const slider = document.querySelector('.slider');
 const navArrows = document.querySelectorAll('.nav-arrow');
-const imagesArray = ['../sources/1.jpg', '../sources/2.jpg', '../sources/3.jpg', '../sources/4.jpg', '../sources/home.png']; 
+const imagesArray = ['../sources/bagno.png', '../sources/bagno2.png', '../sources/camera.png', '../sources/camera2.png', '../sources/parete.png']; 
 let currentIndex = 0;
 
 function updateSlider() {
@@ -37,8 +37,13 @@ navArrows.forEach((arrow) => {
 
 updateSlider();
 
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.add('loading');
+});
+
+window.addEventListener('load', function () {
   setTimeout(function() {
+    document.body.classList.remove('loading');
     document.body.classList.add('loaded');
-  }, 1000); // 1 second delay
+  }, 1000);
 });

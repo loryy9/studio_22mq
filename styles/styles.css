@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'docevita'; /* Nome che userai nel CSS */
+  src: url('/assets/fonts/Dolce Vita.ttf') format('woff2'),
+       url('/assets/fonts/Dolce Vita Heavy Bold.ttf') format('woff'),
+       url('/assets/fonts/Dolce Vita Light.ttf') format('woff3');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,17 +52,26 @@ body {
 }
 
 .title-img {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
   position: absolute;
   top: 50px;
+  gap: 60vh;
 }
 
-.title-img img {
-  width: 60%;
+.logo{
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  font-family: 'dolcevita';
+}
+
+.title-img .logo img {
+  width: 10vh;
 }
 
 .title-img .social {
@@ -81,15 +99,11 @@ body {
   transition: opacity 1s ease, transform 1s ease;
 }
 
-body.loaded .home-text {
-  opacity: 1;
-  transform: translate(-50%, -30%); /* Riporta il div alla sua posizione finale */
-}
-
 .home-text .big-title {
   font-size: 50px;
   margin-bottom: 50px;
   letter-spacing: 1px;
+  font-family: "dolcevita";
 }
 
 .subtitle-container {
@@ -115,14 +129,27 @@ body.loaded .home-text {
 }
 
 .contact {
-  margin-top: 15px;
-  padding: 25px 35px;
-  border-radius: 99px;
+  width: 10%;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  border: 1px solid white;
+  color: #1d334a;
+  text-align: center;
+  margin-top: 20px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.contact:hover{
+  background-color: transparent;
+  color: white;
 }
 
 .more-info {
-  margin-top: 150px;
+  margin-top: 50px;
   animation: bounce 2s infinite;
   display: flex;
   flex-direction: column;
@@ -141,7 +168,7 @@ body.loaded .home-text {
   margin-top: 7px;
 }
 
-.more-info .more-info-btn img {
+.more-info .more-info-btn svg {
   height: 25px;
   width: auto;
 }
@@ -261,7 +288,7 @@ body.loaded .home-text {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 .big-card .right-text button:hover {
@@ -291,11 +318,12 @@ body.loaded .home-text {
 }
 
 .service-card {
-  background-color: #ffffff;
+  background-color: white;
   width: 30vw;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
+  color: black;
 }
 
 .service-card h3 {
@@ -373,9 +401,9 @@ body.loaded .home-text {
   color: white;
   text-align: center;
   margin-top: 20px;
-  /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); */
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 .contact-section button:hover {
@@ -470,6 +498,14 @@ footer img {
   height: 15vh;
   background-color: #333;
   width: auto;
+}
+
+footer .logo{
+  background-color: #333;
+}
+
+footer .logo span {
+  background-color: #333;
 }
 
 footer p {
@@ -775,8 +811,29 @@ footer p {
   }
 }
 
-/* Hide the loader after 1 second */
+/* Mostra il loader quando la pagina sta caricando */
+body.loading .loader-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Nasconde il contenuto principale finché la pagina non è completamente caricata */
+body.loading .home-text {
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Una volta che tutto è stato caricato */
 body.loaded .loader-container {
   opacity: 0;
   visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+body.loaded .home-text {
+  opacity: 1;
+  transform: translate(-50%, -30%);
+  transition: opacity 1s ease, transform 1s ease;
 }
