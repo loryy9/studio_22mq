@@ -124,8 +124,10 @@ body {
 }
 .book {
   margin-bottom: 10px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  line-height: 1.5;
   cursor: pointer;
+  
 }
 
 .contact {
@@ -141,6 +143,10 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  a{
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .contact:hover{
@@ -289,6 +295,10 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  a{
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .big-card .right-text button:hover {
@@ -404,6 +414,10 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  a{
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .contact-section button:hover {
@@ -534,16 +548,23 @@ footer p {
 
 /* Per schermi piccoli e smartphone (max-width: 768px) */
 @media (max-width: 768px) {
-  .home-section {
+  .home-section{
     max-height: 100vh;
+  }
+  .content {
+    height: 100vh;
   }
   .title-img {
     flex-direction: column;
     width: 100%;
-    img {
-      width: 80%;
-      height: 100%;
-    }
+    top: 20px;
+    gap: 5px;
+    .logo{
+      img {
+        width: 50px;
+        height: auto;
+      }
+    }    
   }
 
   .home-text {
@@ -552,7 +573,9 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 45%;
     .big-title {
+      margin-bottom: 20px;
       width: 70%;
       font-size: 1.5rem;
     }
@@ -562,18 +585,38 @@ footer p {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
       .subtitle {
         text-align: center;
-        width: 70%;
+        width: 80%;
         font-size: 1.2rem;
       }
     }
-    /* .book {
-      width: 70%;
+    .book {
+      width: 80%;
       font-size: 1.2rem;
-    } */
+    }
     .more-info {
-      margin-top: 10px;
+      margin-top: 50px;
+      button{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+          color: #000;
+          padding: 0;
+          margin: 0;
+        }
+
+      }
+    }
+    button{
+      width: 30%;
+      font-size: 15px;
+      margin-top: 5px;
     }
   }
 
@@ -747,16 +790,17 @@ footer p {
   }
 
   footer {
-    padding: 30px;
+    text-align: center;
+    padding: 20px;
   }
 
-  footer p {
-    width: 90%;
-  }
-
-  footer img {
-    height: auto;
-    width: 100%;
+  footer .logo {
+    gap: 5px;
+    img {
+      width: 50px;
+      height: auto;
+      margin-bottom: 10px;
+    }
   }
 }
 

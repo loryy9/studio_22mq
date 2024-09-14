@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/styles_contact.css" />
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css" />
     <title>STUDIO 22 MQ_FRANCESCO ODDO</title>
   </head>
   <body>
     <nav>
-      <!-- <p onclick="window.open('/','_self')">HOME</p> -->
-      <a href="/"><img src="/sources/testa.png" alt="22mq" /></a>
+      <a href="/"><div class="logo">
+        <img src="/sources/Logo_Bianco.png" alt="studio 22mq" /><span
+          class="title-logo"
+          >STUDIO 22_MQ FRANCESCO ODDO</span
+        >
+      </div></a>
       <div class="social">
         <img src="/sources/social/instagram-white.png" alt="ig" />
         <img src="/sources/social/spotify-white.png" alt="spotify" />
@@ -27,28 +31,27 @@
         <div class="title">
           <h1>Studio 22mq Francesco Oddo</h1>
         </div>
-        <div class="form">
-          <div class="nome-cognome">
-            <input type="text" placeholder="NOME" />
-            <input type="text" placeholder="COGNOME" />
+        <form action="">
+          <div class="campo">
+            <!-- <label for="Nome">Nome</label> -->
+            <input type="text" placeholder="Nome">
           </div>
-          <div class="email-numero">
-            <input type="email" placeholder="EMAIL" />
-            <input type="number" placeholder="NUMERO" />
+          <div class="campo">
+            <!-- <label for="Cognome">Cognome</label> -->
+            <input type="text" placeholder="Cognome">
           </div>
-          <div class="messaggio">
-            <textarea
-              name="messaggio"
-              id="messaggio"
-              placeholder="MESSAGGIO"
-              cols="20"
-              rows="10"
-            ></textarea>
+          <div class="campo">
+            <!-- <label for="Email">Email</label> -->
+            <input type="email" placeholder="Email">
           </div>
-          <div class="btn-invia">
-            <button type="submit">INVIA</button>
+          <div class="campo">
+            <!-- <label for="testo">Messaggio</label> -->
+           <textarea name="messaggio" id="messaggio" cols="50" rows="5" placeholder="Messaggio"></textarea>
           </div>
-        </div>
+          <div class="btn">
+            <button>Invia</button>
+          </div>
+        </form>
       </div>
     </main>
     <script src="/js/script.js"></script>
