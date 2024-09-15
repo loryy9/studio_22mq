@@ -29,6 +29,7 @@ nav {
 }
 nav a {
   background-color: #1d334a;
+  text-decoration: none;
   .logo {
     background-color: #1d334a;
   }
