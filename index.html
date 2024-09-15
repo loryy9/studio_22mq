@@ -30,13 +30,9 @@
             <h3 class="subtitle">
               Vorresti ristrutturare casa ma hai troppe idee per la testa?
             </h3>
-            <h3 class="subtitle">
-              Inizia da qui!
-            </h3>
+            <h3 class="subtitle">Inizia da qui!</h3>
           </div>
-          <h2 class="book">
-            PRENOTA LA TUA CALL CONOSCITIVA GRATUITA
-          </h2>
+          <h2 class="book">PRENOTA LA TUA CALL CONOSCITIVA GRATUITA</h2>
           <button class="contact">
             <a href="contatti/">CONTATTAMI</a>
           </button>
@@ -170,7 +166,7 @@
             tue idee in progetti concreti comodamente da casa
           </p>
           <!-- <h3>PRENOTA LA TUA CALL CONOSCITIVA GRATUITA</h3> -->
-          <button >
+          <button>
             <a href="contatti/">CONTATTAMI</a>
           </button>
         </div>
@@ -716,9 +712,56 @@
       <h1>Alcuni miei progetti</h1>
     </div>
     <div class="carousel-container">
-      <div class="nav-arrow next"><img src="sources/arrow.png" alt="" /></div>
-      <div class="slider"></div>
-      <div class="nav-arrow prev"><img src="sources/arrow.png" alt="" /></div>
+      <div class="carusel">
+        <div id="btn-left" onclick="swipe(-1)"><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg></div>
+        <div class="carousel-content" id="carousel-content">
+          <div class="element">
+            <img src="/sources/bagno.png" />
+          </div>
+          <div class="element">
+            <img src="/sources/bagno2.png" />
+          </div>
+          <div class="element">
+            <img src="/sources/camera.png" />
+          </div>
+          <div class="element">
+            <img src="/sources/camera2.png" />
+          </div>
+          <div class="element">
+            <img src="/sources/parete.png" />
+          </div>
+          <div class="element">
+            <img src="/sources/4.jpg" />
+          </div>
+        </div>
+        <div id="btn-right" onclick="swipe(1)"><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg></div>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
