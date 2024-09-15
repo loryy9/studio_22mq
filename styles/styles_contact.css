@@ -14,7 +14,7 @@ nav {
   padding: 20px 250px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #1d334a;
   .social {
     background-color: #1d334a;
@@ -31,9 +31,6 @@ nav a {
   background-color: #1d334a;
   .logo {
     background-color: #1d334a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   img {
     width: 80px;
@@ -131,6 +128,11 @@ textarea {
     flex-direction: column;
     padding: 30px 30px;
     height: auto;
+  }
+  nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   nav a {
